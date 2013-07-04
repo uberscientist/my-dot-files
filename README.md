@@ -1,3 +1,3 @@
 My dot files
 ==============
-Clone, then run setup-configs.sh
+Clone, then run `$ ./setup-configs.sh`
