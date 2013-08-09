@@ -39,7 +39,7 @@ NeoBundle 'FuzzyFinder'
 "       \ 'name': 'everything.vim',
 "       \ 'script_type': 'plugin'}
 " Non git repos
-NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+" NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
 " ...
 

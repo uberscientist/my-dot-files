@@ -5,5 +5,4 @@ neocomplcache.vim
 sparkup
 vim-easymotion
 vim-fugitive
-vim-fuzzyfinder
 vimproc
