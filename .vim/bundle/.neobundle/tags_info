@@ -1,9 +1,10 @@
 FuzzyFinder
 L9
+MatchTag
 neobundle.vim
-neocomplcache.vim
-sparkup
+neocomplete.vim
 vim-easymotion
 vim-fugitive
 vim-fuzzyfinder
-vimproc
+vim-mustache-handlebar
+vimproc.vim
