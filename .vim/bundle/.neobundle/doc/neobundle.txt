@@ -581,6 +581,7 @@ g:neobundle#install_max_processes
 		obsolete.
 
 		Defaults to "4".
+<<<<<<< HEAD
 
 					*g:neobundle#install_process_timeout*
 g:neobundle#install_process_timeout
@@ -588,6 +589,8 @@ g:neobundle#install_process_timeout
 		Note: This feature is available if you installed |vimproc|.
 
 		Defaults to "120".
+=======
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 
 g:neobundle#default_options			*g:neobundle#default_options*
 		A dictionary of preconfigured sets of options to use when
@@ -625,6 +628,7 @@ g:neobundle#types#git#default_protocol
 		Note: |g:neobundle_default_git_protocol| is obsolete.
 
 		Defaults to "https".
+<<<<<<< HEAD
 
 				*g:neobundle#types#git#enable_submodule*
 g:neobundle#types#git#enable_submodule
@@ -653,6 +657,8 @@ g:neobundle#types#hg#command_path
 		The "hg" command path used for hg type.
 
 		Defaults to "hg".
+=======
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 
 				*g:neobundle#types#hg#default_protocol*
 g:neobundle#types#hg#default_protocol
@@ -734,6 +740,7 @@ OPTIONS 					*neobundle-options*
 		NeoBundle 'git://github.com/Shougo/unite.vim.git',
 		   \ {'directory' : 'unite'}
 <
+<<<<<<< HEAD
 						*neobundle-options-recipe*
 		recipe			(String)
 		Use default options from the "recipes/{recipe-name}.vimrecipe"
@@ -743,6 +750,8 @@ OPTIONS 					*neobundle-options*
 >
 		NeoBundle 'Shougo/unite.vim', {'recipe' : 'unite'}
 <
+=======
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 						*neobundle-options-base_path*
 		base			(String)
 		Directory base path to use. If omitted, the path specified
@@ -1189,6 +1198,49 @@ OPTIONS 					*neobundle-options*
 	NeoBundleLazy 'LeafCage/cmdlineplus.vim', {
 	      \ 'mappings': [['c', '<Plug>']]}
 <
+<<<<<<< HEAD
+=======
+						*neobundle-options-overwrite*
+		overwrite		(Number)
+		If set to 1, neobundle doesn't overwrite the path to user
+		runtimepath.
+
+						*neobundle-options-resettable*
+		resettable		(Number)
+		If set to 0, neobundle doesn't reset the path in
+		|neobundle#rc()|.
+
+						*neobundle-options-gui*
+		gui			(Number)
+		If set 1, neobundle will only load the plugin in GUI Vim.
+
+		Example: >
+	NeoBundleLazy 'tyru/restart.vim', '', 'same', {
+	      \ 'gui' : 1,
+	      \ 'autoload' : {
+	      \  'commands' : 'Restart'
+	      \ }}
+<
+						*neobundle-options-terminal*
+		terminal		(Number)
+		If set to 1, neobundle will only load the plugin in Terminal
+		Vim.
+
+						*neobundle-options-vim_version*
+		vim_version		(String)
+		Minimal vim version of the plugin supported.
+		It accepts some version formats such as "7" and "7.3" and
+		"7.3.885".
+
+		Example: >
+	" neocomplete requires vim 7.3.885 or above.
+	NeoBundle 'Shougo/neocomplete', {
+	    \ 'depends' : 'Shougo/context_filetype.vim',
+	    \ 'vim_version' : '7.3.885'
+	    \ }
+<
+
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 						*neobundle-options-hooks*
 		hooks			(Dictionary)
 		Specify hook functions or hook script path. The following
@@ -1568,6 +1620,7 @@ FAQ						*neobundle-faq*
 Q: What's the neobundle advantage for Vundle or other plugin management
 system?
 
+<<<<<<< HEAD
 A: neobundle solves some problems in Vundle or other plugin management system.
 But you must know they are huge and complex features.
 
@@ -1584,6 +1637,17 @@ But you must know they are huge and complex features.
    6. Support lazy initialization for optimizing startup time.
    https://github.com/gmarik/Vundle.vim/issues/364
    https://github.com/gmarik/Vundle.vim/pull/98
+=======
+A:
+   1. improved command name(:Bundle vs :NeoBundle).
+   2. neobundle works if you set 'shellslash' in your .vimrc.
+   3. neobundle supports vimproc(asynchronous update/install).
+   4. neobundle supports unite.vim interface(update/install/search).
+   5. neobundle supports revision lock feature.
+   6. neobundle supports other VCS(Subversion/Git).
+   7. neobundle supports lazy initialization for optimizing startup time.
+   8. and so on...
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 
 Q: I want to manage the rsense Vim plugin using neobundle.
 
@@ -1608,10 +1672,16 @@ wrong. You can install |vimproc| to keep your Vim from freezing:
 
 Q: Duplicated error was printed when sourcing .vimrc.
 
+<<<<<<< HEAD
 A: Your .vimrc was wrong. You must reset neobundle setting by
 |neobundle#begin()| in .vimrc.
 Note: You must not call |neobundle#begin()| inside a "has('vim_starting')"
 block.
+=======
+A: Your .vimrc was wrong. You must reset neobundle setting by |neobundle#rc()|
+in .vimrc.
+Note: You must not call |neobundle#rc()| inner "has('vim_starting')".
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 >
 	if has('vim_starting')
 	  set runtimepath+={path to neobundle directory}
@@ -1653,7 +1723,11 @@ A:
 	Unite -log -wrap neobundle/update
 <
 
+<<<<<<< HEAD
 Q: neobundle.vim is not worked in Debian/Ubuntu Linux...
+=======
+Q: neobundle.vim is not worked in debian/Ubuntu Linux...
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 
 A: Did you use "debian.vim"? "debian.vim" changes 'runtimepath'.
 So it conflicts with neobundle. You should not use "debian.vim".
@@ -1687,7 +1761,11 @@ If you don't want to change default protocol, you can set
 |g:neobundle#types#git#default_protocol| manually.  I don't change the default
 value.
 
+<<<<<<< HEAD
 Q: I want to add absolute path in 'runtimepath' with |:NeoBundle| and
+=======
+Q: I want to add absolute path in runtimepath with |:NeoBundle| and
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 |:NeoBundleLazy|.
 https://github.com/Shougo/neobundle.vim/issues/136
 
@@ -1703,6 +1781,7 @@ A: This feature is already implemented. >
 	\ 'name': 'ir_black.vim',
 	\ 'script_type': 'colors'}
 
+<<<<<<< HEAD
 Q: Problem with lazy loading of matchit plugin.
 https://github.com/Shougo/neobundle.vim/issues/153
 
@@ -1757,5 +1836,7 @@ https://github.com/Shougo/neobundle.vim/issues/330
 A: You must use the functions after |neobundle#end()|.
 Because, the plugins are loaded when neobundle calls |neobundle#end()|.
 
+=======
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 ==============================================================================
 vim:tw=78:ts=8:ft=help:norl:noet:fen:

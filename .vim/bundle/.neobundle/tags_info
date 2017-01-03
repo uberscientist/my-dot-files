@@ -5,6 +5,10 @@ neobundle.vim
 neocomplete.vim
 vim-easymotion
 vim-fugitive
+<<<<<<< HEAD
 vim-fuzzyfinder
 vim-mustache-handlebar
 vimproc.vim
+=======
+vimproc
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630

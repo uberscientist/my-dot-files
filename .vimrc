@@ -29,7 +29,6 @@ Plugin 'FuzzyFinder'
 call vundle#end()
 
 filetype plugin indent on
-
 "set 256 color terminal for colorschemes
 set t_Co=256
 colorscheme distinguished

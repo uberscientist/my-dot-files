@@ -569,7 +569,10 @@ neobundle-options-type	neobundle.txt	/*neobundle-options-type*
 neobundle-options-type__depth	neobundle.txt	/*neobundle-options-type__depth*
 neobundle-options-type__filename	neobundle.txt	/*neobundle-options-type__filename*
 neobundle-options-type__protocol	neobundle.txt	/*neobundle-options-type__protocol*
+<<<<<<< HEAD
 neobundle-options-verbose	neobundle.txt	/*neobundle-options-verbose*
+=======
+>>>>>>> ad9d894d57cb7752bb4d20e4e93542c0faae3630
 neobundle-options-vim_version	neobundle.txt	/*neobundle-options-vim_version*
 neobundle-recipe	neobundle.txt	/*neobundle-recipe*
 neobundle-unite-source-neobundle	neobundle.txt	/*neobundle-unite-source-neobundle*
